@@ -21,8 +21,7 @@ public class LoginAndLogout {
     @Test
     public void test() throws Exception {
         LoginUtil.login(driver);
-        Thread.sleep(3000);
-        LogoutUtil.logout(driver);
+        LogoutUtil.logout(driver,1);
     }
     @After
     public void after(){

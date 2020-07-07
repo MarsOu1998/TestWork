@@ -40,9 +40,14 @@ public class ExcelUtil {
         ExcelWSheet = ExcelWBook.getSheet(SheetName);
         try {
             Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-            String CellData = Cell.getStringCellValue();
+            switch (Cell.getCellType()){
+                case STRING:
+                    return Cell.getStringCellValue();
+                default:
+                    return  Integer.toString((int)Cell.getNumericCellValue());
+            }
 
-            return CellData;
+
         } catch (Exception e) {
             return "";
         }

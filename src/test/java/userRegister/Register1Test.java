@@ -1,16 +1,13 @@
 package userRegister;
 
-import module.LoginUtil;
-import module.LogoutUtil;
-import module.RegisterStep1;
-import module.URLUnit;
+import module.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class RegisterStep1Test {
+public class Register1Test {
     private WebDriver driver=new ChromeDriver();
 
     @Before
@@ -19,14 +16,15 @@ public class RegisterStep1Test {
     }
     @After
     public void after() throws InterruptedException {
-        LogoutUtil.logout(driver);
+        LogoutUtil.logout(driver,2);
         driver.quit();
-
     }
 
     @Test
     public void test() throws Exception {
         LoginUtil.login(driver);
-        RegisterStep1.register1(driver);
+        PreRegister.register1(driver);
+        Register1.register1(driver);
+        Thread.sleep(5000);
     }
 }

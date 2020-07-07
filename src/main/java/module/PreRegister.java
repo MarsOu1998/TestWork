@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
-public class RegisterStep1 {
+public class PreRegister {
     public static void register1(WebDriver driver) throws InterruptedException {
 
         driver.findElement(By.id("vue_register_head")).click();

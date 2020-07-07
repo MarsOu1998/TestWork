@@ -10,7 +10,7 @@ public class LoginUtil {
 //    登录模块
     public static void login(WebDriver driver) throws Exception {
         driver.manage().window().maximize();
-        ExcelUtil.setExcelFile("C:\\Users\\Mars\\Desktop\\TestFile.xlsx");
+        ExcelUtil.setExcelFile("src/main/java/ExcelFile/Account.xlsx");
         String account = ExcelUtil.getCellData(1, 1, "LoginTest");
         String password = ExcelUtil.getCellData(1, 2, "LoginTest");
         driver.findElement(By.id("username")).sendKeys(account);

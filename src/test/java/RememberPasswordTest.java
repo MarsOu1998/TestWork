@@ -17,7 +17,7 @@ public class RememberPasswordTest {
     public void test() throws Exception {
         RememberPassword.rememberPassword(driver);
         LoginUtil.login(driver);
-        LogoutUtil.logout(driver);
+        LogoutUtil.logout(driver,1);
         ValidateRememberPassword.validate(driver);
     }
     @After
